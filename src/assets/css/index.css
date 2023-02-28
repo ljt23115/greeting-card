@@ -23,7 +23,7 @@ body {
   --ant-primary-color: #eb4c60;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 400vh;
   overflow: hidden;
   position: relative;
 }

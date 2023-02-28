@@ -1,17 +1,12 @@
 
 import React, { memo, useRef } from 'react'
 import CakeWrapper from './style'
-import { useInView } from "framer-motion"
-
 
 const Cake = memo(() => {
   // const [ref, inView] = useInView();
-  const cakeRef = useRef()
-  const isInView = useInView(cakeRef)
-
 
   return (
-    <CakeWrapper ref={cakeRef}>
+    <CakeWrapper>
       <div className="cake">
         <img src="img/page-1-sum_0000s_0001_cake.png" alt=""/>
         {/* <div className="zone-wrap">

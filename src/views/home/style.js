@@ -29,8 +29,8 @@ const HomeWrapper = styled.div`
         top: 0;
         width: 100%;
         height: 100%;
-        background: rgba(255, 246, 203, 0.6);
-        /* background: rgba(64, 45, 53, 0.8); */
+        /* background: rgba(255, 246, 203, 0.6); */
+        background: rgba(64, 45, 53, 0.8);
 
       }
 
