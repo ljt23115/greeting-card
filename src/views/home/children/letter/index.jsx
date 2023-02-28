@@ -6,8 +6,33 @@ import classNames from 'classnames'
 
 const Letter = memo(() => {
   const letterRef = useRef()
-  const isInView = useInView(letterRef, { once: true })
+  const pRef = useRef()
+  const isInView = useInView(letterRef)
 
+  useEffect(() => {
+    if(!isInView) { return }
+    const span = pRef.current
+    const text = pRef.current.innerText
+    pRef.current.innerText = ''
+    const chars = text.split('')
+    let index = 0;
+    let typing
+    setTimeout(() => {
+      typing = setInterval(function() {
+        if (index < chars.length) {
+          let char = chars[index];
+          span.innerText += char;
+          index++;
+        } else {
+          clearInterval(typing);
+        }
+      }, 100);
+    }, 4500)
+
+    return () => {
+      clearInterval(typing)
+    }
+  }, [pRef, isInView])
 
   return (
     <LetterWrapper ref={letterRef}>
@@ -16,8 +41,8 @@ const Letter = memo(() => {
           <img className={classNames('tuceng2', { animationCover: isInView })} src="img/tuceng2.png" alt="" />
           <img src="img/tuceng1.png" alt="" />
         </div>
-        <div className={classNames('letter', {})}>
-          <p>
+        <div className={classNames('letter', { animationLetter: isInView })}>
+          <p className={classNames({ animationP: isInView })} ref={pRef}>
           测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试
           </p>
         </div>

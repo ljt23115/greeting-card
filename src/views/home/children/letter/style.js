@@ -57,7 +57,22 @@ const LetterWrapper = styled.div`
       p {
         letter-spacing: 2px;
       }
+      .animationP {
+        animation-delay: 4.5s;
+        animation-fill-mode: forwards;
+        /* visibility: hidden; */
+        /* animation: blink 0.7s infinite; */
+      }
+      @keyframes blink {
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+      }
 
+    }
+    .animationLetter {
+      transform: translateY(-300px);
+      transition: transform 2s ease;
+      transition-delay: 2.2s;
     }
 
     .envelope {
