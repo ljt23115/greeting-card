@@ -23,8 +23,8 @@ const Letter = memo(() => {
       setUrl(url)
       setTimeout(() => {
         setSwitch(false)
-      }, 2000)
-    }, 2000)
+      }, 1900)
+    }, 2500)
   }
 
   // useEffect(() => {

@@ -79,7 +79,7 @@ const LetterWrapper = styled.div`
       }
       .animationImg2 {
 
-        animation: openClose 2s ease 2s;
+        animation: openClose 2s ease 2.5s;
       }
       @keyframes openClose {
         50% { opacity: 1; }
