@@ -1,4 +1,3 @@
-
 import React, { memo } from 'react'
 import VideoWrapper from './style'
 
@@ -9,7 +8,5 @@ const Video = memo(() => {
     </VideoWrapper>
   )
 })
-
-
 
 export default Video

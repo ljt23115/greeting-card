@@ -1,4 +1,3 @@
-
 import React, { memo } from 'react'
 import NameWrapper from './style'
 
@@ -9,7 +8,5 @@ const Name = memo(() => {
     </NameWrapper>
   )
 })
-
-
 
 export default Name

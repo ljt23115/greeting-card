@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const NameWrapper = styled.div`
-  img{
+  img {
     width: 100vw;
     height: 100vh;
   }

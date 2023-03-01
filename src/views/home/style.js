@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const HomeWrapper = styled.div`
   .closeAudio {
@@ -27,7 +27,6 @@ const HomeWrapper = styled.div`
     }
   }
 
-
   .full-page {
     height: 500vh;
     width: 100%;
@@ -41,7 +40,6 @@ const HomeWrapper = styled.div`
       top: 20;
       right: 20px;
     } */
-
 
     .page {
       height: 100vh;
@@ -64,10 +62,7 @@ const HomeWrapper = styled.div`
         height: 100%;
         /* background: rgba(255, 246, 203, 0.6); */
         /* background: rgba(64, 45, 53, 0.8); */
-
       }
-
-
     }
 
     .page2 {
@@ -84,9 +79,6 @@ const HomeWrapper = styled.div`
       background-image: url('pageMaterial/img/backcolor/backcolor4.png');
     }
   }
-
-
-
 `
 
 export default HomeWrapper

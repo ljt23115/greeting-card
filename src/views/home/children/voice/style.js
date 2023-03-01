@@ -1,7 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-const VoiceWrapper = styled.div`
-
-`
+const VoiceWrapper = styled.div``
 
 export default VoiceWrapper

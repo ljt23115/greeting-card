@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 const CakeWrapper = styled.div`
-
   .cover {
     display: flex;
     position: relative;
@@ -52,33 +51,33 @@ const CakeWrapper = styled.div`
         z-index: 0;
       }
       .fire {
-      width: 160px;
-      height: 163px;
-      position: absolute;
-      left: 50%;
-      top: 0;
-      z-index: 3;
-      transform: translate(-43%, 20%);
-      /* transform: scale(1.4); */
-      .flame {
-        width: 18px;
-        height: 18px;
-        background: #FFD678;
+        width: 160px;
+        height: 163px;
         position: absolute;
-        z-index: 6;
-        border-radius: 80% 0 55% 50%/55% 0 80% 50%;
         left: 50%;
-        top: -20px;
-        margin-left: -9px;
-        -webkit-transform: rotateZ(-45deg);
-        transform: rotateZ(-45deg);
-        -webkit-animation: flameFlicker 0.9s ease infinite;
-        animation: flameFlicker 0.9s ease infinite;
-      }
-      .flame .inner-flame {
+        top: 0;
+        z-index: 3;
+        transform: translate(-43%, 20%);
+        /* transform: scale(1.4); */
+        .flame {
+          width: 18px;
+          height: 18px;
+          background: #ffd678;
+          position: absolute;
+          z-index: 6;
+          border-radius: 80% 0 55% 50%/55% 0 80% 50%;
+          left: 50%;
+          top: -20px;
+          margin-left: -9px;
+          -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+          -webkit-animation: flameFlicker 0.9s ease infinite;
+          animation: flameFlicker 0.9s ease infinite;
+        }
+        .flame .inner-flame {
           width: 10px;
           height: 10px;
-          background: #D1835C;
+          background: #d1835c;
           position: absolute;
           z-index: 8;
           border-radius: 80% 0 55% 50%/55% 0 80% 50%;
@@ -86,11 +85,11 @@ const CakeWrapper = styled.div`
           margin-left: -7px;
           bottom: 2px;
           opacity: 0.4;
-      }
-      .outer-glow {
+        }
+        .outer-glow {
           width: 200px;
           height: 200px;
-          background: #AA782F;
+          background: #aa782f;
           position: absolute;
           border-radius: 100%;
           left: -20px;
@@ -100,45 +99,47 @@ const CakeWrapper = styled.div`
           animation: glowFlicker 3s linear infinite;
           -webkit-transform-origin: center center;
           transform-origin: center center;
-      }
-      .outer-glow .inner-outer-glow {
+        }
+        .outer-glow .inner-outer-glow {
           width: 70px;
           height: 70px;
-          background: #B57C29;
+          background: #b57c29;
           position: absolute;
           border-radius: 100%;
           opacity: 1;
           left: 50%;
           margin-left: -35px;
           top: 70px;
-      }
+        }
       }
       @keyframes flameFlicker {
-      0%, 100% {
+        0%,
+        100% {
           width: 16px;
           height: 17px;
-      }
-      25% {
+        }
+        25% {
           width: 19px;
           height: 17px;
-      }
-      50% {
-          width: 17px;
-          height: 16px;
-      }
-      75% {
-          width: 17px;
-          height: 19px;
-      }
-      }
-      @keyframes glowFlicker {
-        0%, 100% {
-            opacity: 0.25;
         }
         50% {
-            opacity: 0.4;
-            -webkit-transform: scale(1.02);
-            transform: scale(1.02);
+          width: 17px;
+          height: 16px;
+        }
+        75% {
+          width: 17px;
+          height: 19px;
+        }
+      }
+      @keyframes glowFlicker {
+        0%,
+        100% {
+          opacity: 0.25;
+        }
+        50% {
+          opacity: 0.4;
+          -webkit-transform: scale(1.02);
+          transform: scale(1.02);
         }
       }
     }
@@ -151,10 +152,7 @@ const CakeWrapper = styled.div`
         margin: 0 30px 30px 0;
       }
     }
-
   }
-
-
 `
 
 export default CakeWrapper
