@@ -19,8 +19,11 @@ const Letter = memo(() => {
 
 
     setTimeout(() => {
-      setSwitch(false)
+
       setUrl(url)
+      setTimeout(() => {
+        setSwitch(false)
+      }, 2000)
     }, 2000)
   }
 
@@ -61,7 +64,7 @@ const Letter = memo(() => {
             {/* <p className={classNames({ animationP: isInView })} ref={pRef}>
             测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试
             </p> */}
-            <img className={classNames({animationImg: AnimSwitch})} src={letterUrl} alt="" />
+            <img className={classNames({animationImg: AnimSwitch, animationImg2: AnimSwitch})} src={letterUrl} alt="" />
           </div>
           <div className="envelope">
             <img src="img/envolope-top.png" alt="" />

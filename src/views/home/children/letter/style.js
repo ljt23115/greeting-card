@@ -73,11 +73,18 @@ const LetterWrapper = styled.div`
         width: 100%;
       }
       .animationImg {
-        animation: openClose 4s ease;
+        /* animation: openClose 4s ease; */
+        transform: translateY(570px);
+        transition: transform 2s ease;
+      }
+      .animationImg2 {
+
+        animation: openClose 2s ease 2s;
       }
       @keyframes openClose {
-        50% { transform: translateY(570px); }
-        100% { transform: translateY(-570px); }
+        50% { opacity: 1; }
+        100% { transform: translateY(0); }
+
       }
       .animationP {
         animation-delay: 4.5s;
