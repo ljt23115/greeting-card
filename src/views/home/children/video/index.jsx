@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useRef, useState } from 'react'
 import VideoWrapper from './style'
 
-const Video = memo(() => {
+const Video = memo(({ pauseAudioPlay }) => {
   const videoRef = useRef(null)
   // 播放/暂停
   const [playing, setPlaying] = useState(false)
@@ -10,10 +10,13 @@ const Video = memo(() => {
   // 视频列表
   const videoList = [
     '/pageMaterial/video/video_1.mp4',
-    '/pageMaterial/video/video_1.mp4',
-    '/pageMaterial/video/video_1.mp4'
+    '/pageMaterial/video/video_2.mp4',
+    '/pageMaterial/video/video_3.mp4',
+    '/pageMaterial/video/video_4.mp4'
   ]
   const [videoIndex, setVideoIndex] = useState(0)
+  // 是否在播放默认视频
+  const [isDefaultVideo, setIsDefaultVideo] = useState(true)
 
   const videoPlayHandler = () => {
     if (playing) {
@@ -28,11 +31,15 @@ const Video = memo(() => {
       setPlayIcon('pause')
     } else {
       setPlayIcon('play')
+      pauseAudioPlay()
     }
   }, [playing])
 
   // 播放视频
   const playVideo = () => {
+    setIsDefaultVideo(false)
+    pauseAudioPlay()
+
     if (videoRef.current) {
       videoRef.current.play()
       setPlaying(true)
@@ -49,6 +56,8 @@ const Video = memo(() => {
 
   // 切换视频
   const changeVideo = (index) => {
+    setIsDefaultVideo(false)
+
     if (videoRef.current) {
       videoRef.current.src = videoList[index]
       setVideoIndex(index)
@@ -82,6 +91,7 @@ const Video = memo(() => {
               src={videoList[videoIndex]}
               className="video-viewport"
               controls
+              autoPlay={!isDefaultVideo}
             ></video>
           </div>
 
@@ -95,7 +105,7 @@ const Video = memo(() => {
                     key={index}
                     onClick={() => changeVideo(index)}
                   >
-                    <img src="/pageMaterial/img/common/videotape/videotape_1.png" alt="" />
+                    <img src={`/pageMaterial/img/common/videotape/videotape_${index + 1}.png`} alt="" />
                   </div>
                 )
               })

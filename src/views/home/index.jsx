@@ -28,6 +28,13 @@ const Home = memo(() => {
     }
   }
 
+  // 暂停播放
+  const pauseAudioPlay = () => {
+    const audioEl = audioRef.current
+    audioEl.pause()
+    setMusic(false)
+  }
+
   useEffect(() => {
     const audioEl = audioRef.current
 
@@ -78,10 +85,10 @@ const Home = memo(() => {
           <Letter></Letter>
         </div>
         <div className="page page3">
-          <Video></Video>
+          <Video pauseAudioPlay={pauseAudioPlay}></Video>
         </div>
         <div className="page page4">
-          <Voice></Voice>
+          <Voice pauseAudioPlay={pauseAudioPlay}></Voice>
         </div>
         <div className="page page5">
           <Name></Name>
