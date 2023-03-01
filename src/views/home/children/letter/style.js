@@ -59,9 +59,7 @@ const LetterWrapper = styled.div`
         position: relative;
         margin: 0 auto;
         z-index: 3;
-        /* left: 50%;
-      transform: translateX(-50%); */
-        /* padding: 20px; */
+        left: 1.9%;
         margin-bottom: -400px;
 
         p {
@@ -104,7 +102,7 @@ const LetterWrapper = styled.div`
       .animationLetter {
         transform: translateY(-570px);
         transition: transform 2s ease;
-        transition-delay: 2.2s;
+        transition-delay: 1s;
       }
 
       .envelope {

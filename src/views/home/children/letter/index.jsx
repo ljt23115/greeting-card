@@ -57,12 +57,13 @@ const Letter = memo(() => {
       <div className="letter-wrapper1">
         <div className="letter-wrapper2">
           <div className="cover">
-            <img
+            {/* <img
               className={classNames('tuceng2', { animationCover: isInView })}
               src="img/tuceng2.png"
               alt=""
             />
-            <img src="img/tuceng1.png" alt="" />
+            <img src="img/tuceng1.png" alt="" /> */}
+            <img src="img\tuceng\envelope_bottom.png" alt="" />
           </div>
           <div className={classNames('letter', { animationLetter: isInView })}>
             {/* <p className={classNames({ animationP: isInView })} ref={pRef}>
@@ -78,7 +79,8 @@ const Letter = memo(() => {
             />
           </div>
           <div className="envelope">
-            <img src="img/envolope-top.png" alt="" />
+            {/* <img src="img/envolope-top.png" alt="" /> */}
+            <img src="img\tuceng\envelopw_top.png" alt="" />
           </div>
         </div>
       </div>

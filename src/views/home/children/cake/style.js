@@ -1,6 +1,31 @@
 import styled from 'styled-components'
 
 const CakeWrapper = styled.div`
+  .popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    width: 300px;
+    height: 50px;
+    background-color: #d39843;
+    color: #f0d8d0;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: -80px;
+    animation: popup 5s ease 1s;
+  }
+  @keyframes popup {
+    0% { margin-top: -80px; }
+    25% { margin-top: 0; }
+    75% { margin-top: 0; }
+    100% { margin-top: -80px; }
+  }
+
   .cover {
     display: flex;
     position: relative;
@@ -31,8 +56,8 @@ const CakeWrapper = styled.div`
       right: 0;
       top: 140px;
       img {
-        width: 30vw;
-        height: 50vh;
+        width: 100%;
+        height: 60vh;
       }
     }
     .cake {
@@ -42,7 +67,7 @@ const CakeWrapper = styled.div`
       z-index: 2;
 
       img {
-        width: 30vw;
+        width: 100%;
         height: 43vh;
         position: relative;
         z-index: 3;

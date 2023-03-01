@@ -65,7 +65,7 @@ const Home = memo(() => {
         <source src="pageMaterial/bgm/bgm.mp3" type="audio/mpeg" />
       </audio>
       <div className="closeAudio" onClick={() => closeAudio()}>
-        <span>&gt;&gt;</span>
+        <span>♫</span>
         <span>{musicOn ? '关闭背景音乐' : '播放背景音乐'}</span>
       </div>
       <div className="full-page" ref={fullPageEl}>

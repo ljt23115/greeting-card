@@ -74,9 +74,11 @@ const HomeWrapper = styled.div`
     }
     .page4 {
       background-image: url('pageMaterial/img/backcolor/backcolor3.png');
+      position: relative;
+      z-index: 3;
     }
     .page5 {
-      background-image: url('pageMaterial/img/backcolor/backcolor4.png');
+      background-image: linear-gradient(to bottom, #ae8c4f, #bc9756);
     }
   }
 `

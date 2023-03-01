@@ -4,6 +4,7 @@ import CakeWrapper from './style'
 const Cake = memo(() => {
   return (
     <CakeWrapper>
+      <div className="popup">F11 全屏观看更佳</div>
       <div className="cover">
         <div className="text">
           <img src="pageMaterial\img\common\word\word_title.png" alt="" />
