@@ -9,15 +9,18 @@ const CakeWrapper = styled.div`
       margin-left: 5%;
       margin-top: 6%;
       position: relative;
-      z-index: 5;
+
       img {
         width: 78vw;
         height: 20vh;
+        position: relative;
+        z-index: 8;
       }
       .firework {
         position: absolute;
         top: -80px;
         left: 0px;
+        z-index: 5;
         img {
           width: 15vw;
         }
@@ -47,7 +50,7 @@ const CakeWrapper = styled.div`
       .light {
         position: absolute;
         top: 0;
-        transform: translate(0, -48%);
+        transform: translate(2%, -48%);
         z-index: 0;
       }
       .fire {

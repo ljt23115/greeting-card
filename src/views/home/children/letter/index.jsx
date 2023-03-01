@@ -23,8 +23,8 @@ const Letter = memo(() => {
       setUrl(url)
       setTimeout(() => {
         setSwitch(false)
-      }, 1900)
-    }, 2300)
+      }, 2400)
+    }, 2000)
   }
 
   // useEffect(() => {
@@ -99,19 +99,20 @@ const Letter = memo(() => {
           }
         />
         <img
-          src="pageMaterial\img\xunGuang\envelope\envelope_xunGuang.png"
+          src="pageMaterial\img\luoXue\envelope\envelope_close_luoXue.png"
           alt=""
           onClick={() =>
-            imgClick('pageMaterial/img/patrick/letter/letter_patrick.png')
+            imgClick('pageMaterial/img/luoXue/letter/letter_luoXue.png')
           }
         />
         <img
-          src="pageMaterial\img\jieRan\envelope\envelope_close_jieRan.png"
+          src="pageMaterial\img\xunGuang\envelope\envelope_xunGuang.png"
           alt=""
           onClick={() =>
-            imgClick('pageMaterial/img/patrick/letter/letter_patrick.png')
+            imgClick('pageMaterial/img/xunGuang/letter/letter_xunGuang.png')
           }
         />
+
       </div>
     </LetterWrapper>
   )
