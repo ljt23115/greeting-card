@@ -4,7 +4,8 @@ import CakeWrapper from './style'
 const Cake = memo(() => {
   return (
     <CakeWrapper>
-      <div className="popup">F11 全屏观看更佳</div>
+      <div className="popup">按 F11 进入全屏模式   观看效果更加  ^v^</div>
+      <div className="popup popup2">请点击 右上角按钮 播放音乐 ~ v ~</div>
       <div className="cover">
         <div className="text">
           <img src="pageMaterial\img\common\word\word_title.png" alt="" />

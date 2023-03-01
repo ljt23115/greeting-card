@@ -7,7 +7,7 @@ const CakeWrapper = styled.div`
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
-    width: 300px;
+    width: 400px;
     height: 50px;
     background-color: #d39843;
     color: #f0d8d0;
@@ -17,7 +17,10 @@ const CakeWrapper = styled.div`
     justify-content: center;
     border-radius: 5px;
     margin-top: -80px;
-    animation: popup 5s ease 1s;
+    animation: popup 6s ease 1s;
+  }
+  .popup2 {
+    animation: popup 6s ease 7s;
   }
   @keyframes popup {
     0% { margin-top: -80px; }
