@@ -5,6 +5,7 @@ import Cake from './children/cake'
 import Letter from './children/letter'
 import Video from './children/video'
 import Name from './children/name'
+import Voice from './children/voice'
 import { throttle } from '../../utils/throttle'
 
 const Home = memo(() => {
@@ -58,6 +59,9 @@ const Home = memo(() => {
           <Video></Video>
         </div>
         <div className="page page4">
+          <Voice></Voice>
+        </div>
+        <div className="page page5">
           <Name></Name>
         </div>
       </div>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 const HomeWrapper = styled.div`
 
   .full-page {
-    height: 400vh;
+    height: 500vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@ const HomeWrapper = styled.div`
     }
 
     .page1 {
-      background-image: radial-gradient(ellipse at center, #FDF3C2, #330900);
+      background-image: url('pageMaterial/img/backcolor/backcolor0.png');
 
       position: relative;
       .cover {
@@ -30,7 +30,7 @@ const HomeWrapper = styled.div`
         width: 100%;
         height: 100%;
         /* background: rgba(255, 246, 203, 0.6); */
-        background: rgba(64, 45, 53, 0.8);
+        /* background: rgba(64, 45, 53, 0.8); */
 
       }
 
@@ -38,14 +38,17 @@ const HomeWrapper = styled.div`
     }
 
     .page2 {
-      background-color: green;
+      background-image: url('pageMaterial/img/backcolor/backcolor1.png');
     }
 
     .page3 {
-      background-color: blue;
+      background-image: url('pageMaterial/img/backcolor/backcolor2.png');
     }
     .page4 {
-      background-color: orange;
+      background-image: url('pageMaterial/img/backcolor/backcolor3.png');
+    }
+    .page5 {
+      background-image: url('pageMaterial/img/backcolor/backcolor4.png');
     }
   }
 
