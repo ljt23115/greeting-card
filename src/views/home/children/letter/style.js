@@ -1,11 +1,23 @@
 import styled from 'styled-components'
 
 const LetterWrapper = styled.div`
-  .letter-wrapper {
-    width: 500px;
-    height: 700px;
+  display: flex;
+  justify-content: flex-end;
+  .letter-wrapper1 {
+    display: flex;
+    flex: 1;
+    /* width: 100%; */
+
+
+    .letter-wrapper2 {
+    width: 575px;
+    height: 780px;
+    /* margin-right: 100px; */
     overflow: hidden;
     position: relative;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -42,20 +54,30 @@ const LetterWrapper = styled.div`
 
     }
     .letter {
-      background-color: rgb(255, 252, 228);
-      background-image: url('img/58dd9dc889dd22f326031dc8527827f.png');
-      width: 90%;
-      height: 500px;
+      /* background-color: rgb(255, 252, 228); */
+      /* background-image: url('img/58dd9dc889dd22f326031dc8527827f.png'); */
+      width: 93%;
+      height: 600px;
       position: relative;
       margin: 0 auto;
       z-index: 3;
       /* left: 50%;
       transform: translateX(-50%); */
-      padding: 20px;
-      margin-bottom: -320px;
+      /* padding: 20px; */
+      margin-bottom: -400px;
 
       p {
         letter-spacing: 2px;
+      }
+      img {
+        width: 100%;
+      }
+      .animationImg {
+        animation: openClose 4s ease;
+      }
+      @keyframes openClose {
+        50% { transform: translateY(570px); }
+        100% { transform: translateY(-570px); }
       }
       .animationP {
         animation-delay: 4.5s;
@@ -70,7 +92,7 @@ const LetterWrapper = styled.div`
 
     }
     .animationLetter {
-      transform: translateY(-300px);
+      transform: translateY(-570px);
       transition: transform 2s ease;
       transition-delay: 2.2s;
     }
@@ -89,6 +111,23 @@ const LetterWrapper = styled.div`
       transform: translateY(-300px);
       transition: transform 2s ease;
     } */
+    }
+  }
+
+  .letter-lists {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    img {
+      width: 50%;
+      height: 50%;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: transform .5s ease;
+      }
+    }
   }
 `
 
