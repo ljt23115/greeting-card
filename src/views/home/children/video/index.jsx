@@ -7,7 +7,7 @@ const Video = memo(() => {
   const [playing, setPlaying] = useState(false)
   // 播放/暂停按钮
   const [playIcon, setPlayIcon] = useState('play')
-  // 视频切换
+  // 视频列表
   const videoList = [
     '/pageMaterial/video/video_1.mp4',
     '/pageMaterial/video/video_1.mp4'
@@ -17,23 +17,17 @@ const Video = memo(() => {
   const videoPlayHandler = () => {
     if (playing) {
       pauseVideo()
-      setPlayIcon('play')
     } else {
       playVideo()
-      setPlayIcon('pause')
     }
   }
 
-  //
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.addEventListener('ended', () => {
-        setPlaying(false)
-        setPlayIcon('play')
-      })
+    if (playing) {
+      setPlayIcon('pause')
+    } else {
+      setPlayIcon('play')
     }
-
-
   }, [playing])
 
   // 播放视频
@@ -58,7 +52,6 @@ const Video = memo(() => {
       videoRef.current.src = videoList[index]
       setVideoIndex(index)
       playVideo()
-      videoPlayHandler()
     }
   }
 
@@ -105,9 +98,6 @@ const Video = memo(() => {
                 )
               })
             }
-            {/* // <div className="video-select-item">
-            //   <img src="/pageMaterial/img/common/videotape/videotape_1.png" alt="" />
-            // </div> */}
           </div>
       </div>
     </VideoWrapper>

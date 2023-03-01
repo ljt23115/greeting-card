@@ -28,9 +28,9 @@ const VideoWrapper = styled.div`
       }
       .video-control {
         position: absolute;
-        left: 14.3rem;
-        bottom: 5rem;
-        width: 4.5rem;
+        left: 14.6rem;
+        bottom: 5.2rem;
+        width: 4rem;
       }
       .video-viewport {
         position: absolute;
@@ -50,7 +50,15 @@ const VideoWrapper = styled.div`
       padding: 0 10rem;
       .video-select-item {
         img {
+          position: relative;
           width: 13rem;
+          transition: transform 0.3s ease-out, margin-top 0.3s ease-out;
+          transform-origin: top center;
+        }
+
+        img:hover {
+          transform: scale(1.05);
+          margin-bottom: -10px;
         }
       }
       .video-select-item-active{
