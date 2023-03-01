@@ -65,6 +65,9 @@ const VideoWrapper = styled.div`
 
       }
     }
+    video::-webkit-media-controls-play-button {
+      display: none !important;
+    }
   }
 `
 

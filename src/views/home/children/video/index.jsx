@@ -10,6 +10,7 @@ const Video = memo(() => {
   // 视频列表
   const videoList = [
     '/pageMaterial/video/video_1.mp4',
+    '/pageMaterial/video/video_1.mp4',
     '/pageMaterial/video/video_1.mp4'
   ]
   const [videoIndex, setVideoIndex] = useState(0)
@@ -80,6 +81,7 @@ const Video = memo(() => {
               ref={videoRef}
               src={videoList[videoIndex]}
               className="video-viewport"
+              controls
             ></video>
           </div>
 
