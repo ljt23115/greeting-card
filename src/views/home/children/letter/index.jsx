@@ -24,7 +24,7 @@ const Letter = memo(() => {
       setTimeout(() => {
         setSwitch(false)
       }, 1900)
-    }, 2500)
+    }, 2300)
   }
 
   // useEffect(() => {

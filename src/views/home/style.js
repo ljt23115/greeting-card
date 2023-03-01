@@ -1,6 +1,32 @@
 import styled from "styled-components";
 
 const HomeWrapper = styled.div`
+  .closeAudio {
+    position: fixed;
+    top: 30px;
+    right: 0;
+    color: #f0d8d0;
+    cursor: pointer;
+    width: 130px;
+    height: 50px;
+    background-color: #d39843;
+    opacity: 0.8;
+    z-index: 10;
+    /* padding-right: 20px; */
+    line-height: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: -95px;
+
+    &:hover {
+      transform: translateX(-95px);
+      transition: all 1s ease;
+    }
+  }
+
 
   .full-page {
     height: 500vh;
@@ -8,6 +34,13 @@ const HomeWrapper = styled.div`
     display: flex;
     flex-direction: column;
     transition: transform 1s ease;
+    position: relative;
+
+    /* .audio {
+      position: fixed;
+      top: 20;
+      right: 20px;
+    } */
 
 
     .page {

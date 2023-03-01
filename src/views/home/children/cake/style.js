@@ -1,25 +1,65 @@
 import styled from 'styled-components'
 
 const CakeWrapper = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .cake {
+
+  .cover {
+    display: flex;
     position: relative;
-    transform: translateY(60%);
-    img {
-      width: 250px;
-      height: 250px;
+
+    .text {
+      margin-left: 5%;
+      margin-top: 6%;
+      position: relative;
+      z-index: 5;
+      img {
+        width: 78vw;
+        height: 20vh;
+      }
+      .firework {
+        position: absolute;
+        top: -80px;
+        left: 0px;
+        img {
+          width: 15vw;
+        }
+      }
     }
-    .fire {
+    .qiqiu {
+      position: absolute;
+      right: 0;
+      top: 140px;
+      img {
+        width: 30vw;
+        height: 50vh;
+      }
+    }
+    .cake {
+      position: absolute;
+      left: 8%;
+      bottom: 50px;
+      z-index: 2;
+
+      img {
+        width: 30vw;
+        height: 43vh;
+        position: relative;
+        z-index: 3;
+      }
+      .light {
+        position: absolute;
+        top: 0;
+        transform: translate(0, -48%);
+        z-index: 0;
+      }
+      .fire {
       width: 160px;
       height: 163px;
-      position: relative;
-      left: 50px;
-      bottom: 230px;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      z-index: 3;
+      transform: translate(-43%, 20%);
+      /* transform: scale(1.4); */
       .flame {
         width: 18px;
         height: 18px;
@@ -50,7 +90,7 @@ const CakeWrapper = styled.div`
       .outer-glow {
           width: 200px;
           height: 200px;
-          background: #6E4247;
+          background: #AA782F;
           position: absolute;
           border-radius: 100%;
           left: -20px;
@@ -64,62 +104,55 @@ const CakeWrapper = styled.div`
       .outer-glow .inner-outer-glow {
           width: 70px;
           height: 70px;
-          background: #8e555c;
+          background: #B57C29;
           position: absolute;
           border-radius: 100%;
           opacity: 1;
           left: 50%;
           margin-left: -35px;
-          top: 60px;
+          top: 70px;
       }
-    }
-    @keyframes flameFlicker {
-    0%, 100% {
-        width: 16px;
-        height: 17px;
-    }
-    25% {
-        width: 19px;
-        height: 17px;
-    }
-    50% {
-        width: 17px;
-        height: 16px;
-    }
-    75% {
-        width: 17px;
-        height: 19px;
-    }
-    }
-    @keyframes glowFlicker {
+      }
+      @keyframes flameFlicker {
       0%, 100% {
-          opacity: 0.25;
+          width: 16px;
+          height: 17px;
+      }
+      25% {
+          width: 19px;
+          height: 17px;
       }
       50% {
-          opacity: 0.4;
-          -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+          width: 17px;
+          height: 16px;
+      }
+      75% {
+          width: 17px;
+          height: 19px;
+      }
+      }
+      @keyframes glowFlicker {
+        0%, 100% {
+            opacity: 0.25;
+        }
+        50% {
+            opacity: 0.4;
+            -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+        }
       }
     }
-  }
-  .letter {
-    position: absolute;
-    top: 80px;
-    left: 80px;
-    img {
-      width: 50%;
+    .toName {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      img {
+        width: 38vw;
+        margin: 0 30px 30px 0;
+      }
     }
-  }
-  .qiqiu {
-    position: absolute;
-    top: 200px;
-    right: -10%;
-    img {
-      width: 20%;
-    }
-  }
 
-
+  }
 
 
 `

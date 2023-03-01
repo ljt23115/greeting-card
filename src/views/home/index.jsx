@@ -12,7 +12,34 @@ const Home = memo(() => {
   const fullPageEl = useRef()
   const currentPage = useRef(0)
 
-  const navigate = useNavigate()
+  const audioRef = useRef()
+
+  const [ musicOn, setMusic ] = useState(false)
+
+  const closeAudio = function() {
+    const audioEl = audioRef.current;
+
+    // 检查音频是否正在播放
+    if (audioEl && audioEl.paused) {
+      audioEl.play()
+      setMusic(true)
+    } else {
+      audioEl.pause()
+      setMusic(false)
+    }
+
+  }
+
+  useEffect(() => {
+    const audioEl = audioRef.current;
+
+    // 检查音频是否正在播放
+    if (audioEl && audioEl.paused) {
+      audioEl.play()
+    }
+
+  }, [])
+
 
   useEffect(() => {
     const pagesEl = fullPageEl.current.children
@@ -28,11 +55,6 @@ const Home = memo(() => {
 
         fullPageEl.current.style.transform = `translateY(-${aimPage * 100}vh)`;
 
-        // 添加或替换历史记录
-        // const currentPageName = `/page${currentPage + 1}`;
-        // const currentPageRoute = routes[currentPageName];
-        // history.pushState({ page: currentPageName }, "", currentPageRoute);
-        // navigate(currentPageName)
       }
 
 
@@ -46,6 +68,13 @@ const Home = memo(() => {
 
   return (
     <HomeWrapper>
+      <audio className='audio' loop ref={audioRef}>
+        <source src='pageMaterial/bgm/bgm.mp3' type="audio/mpeg" />
+      </audio>
+      <div className="closeAudio" onClick={() => closeAudio()}>
+        <span>&gt;&gt;</span>
+        <span>{ musicOn ? '关闭背景音乐' : '播放背景音乐' }</span>
+      </div>
       <div className="full-page"  ref={fullPageEl}>
         <div className="page page1">
           <div className="cover">
