@@ -1,11 +1,18 @@
 import React, { memo } from 'react'
 import CakeWrapper from './style'
+import Confetti from 'react-confetti'
+import useWindowSize from 'react-use/lib/useWindowSize'
 
 const Cake = memo(() => {
+  const { width, height } = useWindowSize()
   return (
     <CakeWrapper>
       <div className="popup">按 F11 进入全屏模式   观看效果更加  ^v^</div>
       <div className="popup popup2">请点击 右上角按钮 播放音乐 ~ v ~</div>
+      <Confetti
+      width={width}
+      height={height}
+    />
       <div className="cover">
         <div className="text">
           <img src="pageMaterial\img\common\word\word_title.png" alt="" />
